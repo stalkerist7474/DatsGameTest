@@ -7,6 +7,6 @@ using UnityEngine;
 public class SaveData
 {
     [Header("Main parametrs")]
-    [ReadOnly] public int Coins = 200;
+    [ReadOnly] public int Coins = 0;
     
 }

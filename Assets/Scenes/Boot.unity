@@ -383,9 +383,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyData:
-    Coins: 200
+    Coins: 0
   _myDefaultData:
-    Coins: 200
+    Coins: 0
 --- !u!1001 &6172922436179648485
 PrefabInstance:
   m_ObjectHideFlags: 0

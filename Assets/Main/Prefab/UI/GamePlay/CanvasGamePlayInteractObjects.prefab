@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 4399832163009160436}
   - component: {fileID: 4399832163009160435}
   - component: {fileID: 4399832163009160434}
+  - component: {fileID: 4576514747595483975}
   m_Layer: 0
   m_Name: ButtonGetCoin
   m_TagString: Untagged
@@ -571,7 +572,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4399832163009160435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4576514747595483975}
+        m_TargetAssemblyTypeName: ButtonGetCoin, Assembly-CSharp
+        m_MethodName: PressButtonGetCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4576514747595483975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399832163009160432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8da3033da1390f498d979eaa12f8590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6832689559891573571
 GameObject:
   m_ObjectHideFlags: 0
