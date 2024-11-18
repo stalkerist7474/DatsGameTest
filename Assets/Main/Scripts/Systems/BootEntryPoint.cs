@@ -23,6 +23,8 @@ public class BootEntryPoint : MonoBehaviour
             Debug.Log($"<color=#20C30C>Load System = {system.gameObject.name}</color>");
         }
 
+        yield return new WaitForSeconds(2f); //задержка загрузки на 2 секунды по ТЗ
+
         yield return SceneManager.LoadSceneAsync(Scenes.MENU);
 
 
