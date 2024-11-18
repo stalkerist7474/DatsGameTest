@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b728a2abd67082b468bcc1a0ea540771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 6172922436884120224}
+  CanvasGameobject: {fileID: 6172922436884120224}
 --- !u!1 &6172922437713828757
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 6172922437713828756}
   - component: {fileID: 6172922437713828758}
   - component: {fileID: 6172922437713828759}
+  - component: {fileID: 985467061}
   m_Layer: 0
   m_Name: LoadingIndicator
   m_TagString: Untagged
@@ -223,6 +224,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &985467061
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172922437713828757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 033b106b8b6da404690735de01151269, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6172922437901266531
 GameObject:
   m_ObjectHideFlags: 0

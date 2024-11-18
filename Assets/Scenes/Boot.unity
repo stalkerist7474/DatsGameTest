@@ -333,11 +333,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1817884647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6172922436884120224, guid: 12912587dad203f4dadced09d39ba4ea, type: 3}
-  m_PrefabInstance: {fileID: 6172922436179648485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1968728962
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyData:
     Coins: 0
-  _myDefaultData:
+  myDefaultData:
     Coins: 0
 --- !u!1001 &6172922436179648485
 PrefabInstance:
@@ -441,9 +436,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 6172922436903986415, guid: 12912587dad203f4dadced09d39ba4ea, type: 3}
-      propertyPath: CanvasGameobject
-      value: 
-      objectReference: {fileID: 1817884647}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12912587dad203f4dadced09d39ba4ea, type: 3}
