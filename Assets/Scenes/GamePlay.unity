@@ -331,6 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085027374}
   - component: {fileID: 2085027375}
+  - component: {fileID: 2085027376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -367,6 +368,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueAddsCoin: 5
   playerChest: {fileID: 1813709769277725403}
+--- !u!114 &2085027376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085027373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af9125f2f1a9c84a8d3189aca326e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToPreload:
+  - {fileID: 1134059873811236844, guid: 6d090c4f988257a4f9f2ef0a7821eaf3, type: 3}
+  objectsToPreloadTimes: 1e000000
+  hideObjectsInHierarchy: 0
 --- !u!1001 &1813709769277725401
 PrefabInstance:
   m_ObjectHideFlags: 0

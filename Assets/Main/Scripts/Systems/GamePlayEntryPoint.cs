@@ -15,6 +15,7 @@ public class GamePlayEntryPoint : MonoBehaviour
             system.Activate();
             Debug.Log($"<color=#20C30C>Load System GamePlay = {system.gameObject.name}</color>");
         }
+
     }
 
 }

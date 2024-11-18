@@ -8,6 +8,12 @@ using UnityEngine;
 public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
 {
     [SerializeField] private TMP_Text valueCoin;
+    [Header("Show income parametrs")]
+    [SerializeField] private GameObject prefabIncomeCoin;
+    [SerializeField] private Transform PointIncomeCoin;
+
+    [SerializeField] private float maxXDistance = 150f;
+    [SerializeField] private float maxYDistance = 150f;
 
 
     public void Subscribe()
@@ -22,6 +28,11 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
     public void OnEvent(ChangeCoinValueEvent eventName)
     {
         UpdateTextCoinValue(eventName.NewValueCoin);
+
+        if (eventName.IsShowIncome)
+        {
+            ShowIncomeCoin(eventName.NewIncomeCoinValue);
+        }
     }
 
     //отображение нового значение золота
@@ -29,6 +40,31 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
     {
         valueCoin.text = value.ToString();
         Debug.Log("UpdateTextCoinValue");
+    }
+
+    //отображение пополнения золота, используется пул объектов ( настраивается число, позиция, вращение и родитель для корректной работы слоев)
+    private void ShowIncomeCoin(int value)
+    {
+        GameObject newIncome = ObjectPool.GetNextObject(prefabIncomeCoin, false);
+        FXAddCoinValue FX = newIncome.GetComponent<FXAddCoinValue>();
+
+        FX.coinValue.text = "+" + value.ToString();
+        newIncome.transform.SetParent(transform, false);
+        newIncome.transform.position = GetRandomPosition();
+        newIncome.transform.rotation = Quaternion.Euler(0, 0, Random.Range(1, 30f));
+        newIncome.SetActive(true);
+        FX.StartShow();
+    }
+
+    //получение случайной координаты от изначальной точки для показа поступающих денег
+    private Vector3 GetRandomPosition()
+    {
+        float randomX = Random.Range(-maxXDistance, maxXDistance);
+        float randomY = Random.Range(-maxYDistance, maxYDistance);
+
+        // Создаем позицию объекта
+        Vector3 position = PointIncomeCoin.position + new Vector3(randomX, randomY, 0);
+        return position;
     }
 
     private void Start()
