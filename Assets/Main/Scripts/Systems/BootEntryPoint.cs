@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BootEntryPoint : MonoBehaviour
 {
-    [SerializeField] private UIBoot UIStartGame;
+    [SerializeField] private UICanvas UIStartGame;
     [SerializeField] private List<IGameSystem> gameSystems;
 
 
@@ -14,7 +14,7 @@ public class BootEntryPoint : MonoBehaviour
         Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-        UIStartGame.ShowLoadingScreen();
+        UIStartGame.SwitchOnCanvas();
 
 
         foreach (var system in gameSystems) // очередность загрузки/включения систем игры которые будут работать на протяжении всего игрового процесса(savemanager,firebase, реклама, InApp, и другие SDK и системы 
