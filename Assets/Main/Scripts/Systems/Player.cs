@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : IGameSystem, IEventSubscriber<PressGetButtonEvent>
 {
     [SerializeField] private int valueAddsCoin;
+    [SerializeField] private Chest playerChest;
     private int coinValue = 0;
 
 
@@ -37,6 +38,7 @@ public class Player : IGameSystem, IEventSubscriber<PressGetButtonEvent>
     private void AddCoin()
     {
         coinValue += valueAddsCoin;
+        playerChest.TriggerAnimNormalGetCoin();
         SaveManager.Instance.MyData.Coins = coinValue;
         SaveManager.Instance.Save();
         EventBus.RaiseEvent(new ChangeCoinValueEvent(coinValue));

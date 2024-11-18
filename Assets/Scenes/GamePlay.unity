@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueAddsCoin: 5
+  playerChest: {fileID: 1813709769277725403}
 --- !u!1001 &1813709769277725401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,10 +377,6 @@ PrefabInstance:
     - target: {fileID: 1813709767417305632, guid: 310cdd4fcaf62c6409f1aa3b360268bf, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813709767417305632, guid: 310cdd4fcaf62c6409f1aa3b360268bf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1813709767417305635, guid: 310cdd4fcaf62c6409f1aa3b360268bf, type: 3}
       propertyPath: m_RootOrder
@@ -427,3 +424,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310cdd4fcaf62c6409f1aa3b360268bf, type: 3}
+--- !u!114 &1813709769277725403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813709769277725403, guid: 310cdd4fcaf62c6409f1aa3b360268bf, type: 3}
+  m_PrefabInstance: {fileID: 1813709769277725401}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124b82d288940364286defc98c226434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

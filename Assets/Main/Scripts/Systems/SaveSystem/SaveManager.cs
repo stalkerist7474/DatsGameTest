@@ -26,17 +26,20 @@ public class SaveManager : IGameSystem
         MyData = saveSystem.Load();
     }
 
+    //сохранение в файл данных из SaveData
     public void Save()
     {
         saveSystem.Save(MyData);
     }
 
+    //загрузка из файла данных в SaveData
     public void Load()
     {
         MyData = saveSystem.Load();
         Save();
     }
 
+    //сброс SaveData 
     public void SetDefaultSaveData()
     {
         saveSystem.Save(MyDefaultData);

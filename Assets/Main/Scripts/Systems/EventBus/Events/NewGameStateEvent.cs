@@ -1,4 +1,7 @@
 
+
+//евент нового состояния игры
+
 public struct NewGameStateEvent : IEvent
 {
     public GameState OldState;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
+//обновление значения показателя золота на UI на основе событий
 public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
 {
     [SerializeField] private TMP_Text valueCoin;
@@ -22,6 +24,7 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
         UpdateTextCoinValue(eventName.NewValueCoin);
     }
 
+    //отображение нового значение золота
     private void UpdateTextCoinValue(int value)
     {
         valueCoin.text = value.ToString();

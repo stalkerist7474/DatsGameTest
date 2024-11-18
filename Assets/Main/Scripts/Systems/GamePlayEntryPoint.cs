@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//точка входа в сцену в которой настраивается очередность включения игровых объектов/менеджеров
 public class GamePlayEntryPoint : MonoBehaviour
 {
     [SerializeField] private List<IGameSystem> gameSystems;

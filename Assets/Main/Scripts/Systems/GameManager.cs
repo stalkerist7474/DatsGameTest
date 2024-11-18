@@ -47,6 +47,8 @@ public class GameManager : IGameSystem,IEventSubscriber<NewGameStateEvent>
         this.gameObject.SetActive(true);
     }
 
+
+    //обработка нового GameState и выполнение необходимых методов
     private void ChangeGameState(GameState newGameState)
     {
         previusGameState = currentGameState;

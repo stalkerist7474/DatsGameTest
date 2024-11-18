@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//точка входа в сцену в которой настраивается очередность включения игровых объектов/менеджеров
 public class BootEntryPoint : MonoBehaviour
 {
     [SerializeField] private UICanvas UIStartGame;
