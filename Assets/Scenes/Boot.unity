@@ -379,8 +379,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyData:
     Coins: 0
+    OrientationGame: 0
   myDefaultData:
     Coins: 0
+    OrientationGame: 0
 --- !u!1001 &6172922436179648485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,5 +438,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6172922438113287237, guid: 12912587dad203f4dadced09d39ba4ea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12912587dad203f4dadced09d39ba4ea, type: 3}
