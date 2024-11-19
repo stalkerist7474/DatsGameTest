@@ -55,6 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 1.5
   canvasGroup: {fileID: 8856804259431898277}
+  normalColor: {r: 0.990566, g: 0.7618911, b: 0.034264747, a: 1}
+  ExtraColor: {r: 0.9622642, g: 0.16037726, b: 0.16037726, a: 1}
   coinValue: {fileID: 5574746766421030767}
 --- !u!225 &8856804259431898277
 CanvasGroup:

@@ -46,7 +46,7 @@ public class Player : IGameSystem, IEventSubscriber<PressGetButtonEvent>
         playerChest.TriggerAnimNormalGetCoin();
         SaveManager.Instance.MyData.Coins = coinValue;
         SaveManager.Instance.Save();
-        EventBus.RaiseEvent(new ChangeCoinValueEvent(coinValue,true, valueAddsCoin));
+        EventBus.RaiseEvent(new ChangeCoinValueEvent(coinValue,true, valueAddsCoin,false));
     }
 
 
