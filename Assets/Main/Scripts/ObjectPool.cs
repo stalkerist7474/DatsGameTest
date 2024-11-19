@@ -194,16 +194,5 @@ public class ObjectPool : MonoBehaviour
         Debug.Log("Pool Ok");
     }
 
-    //public void StartPreload()
-    //{
-    //    allObjectsLoaded = false;
-
-    //    for (int i = 0; i < objectsToPreload.Length; i++)
-    //    {
-    //        PreloadObject(objectsToPreload[i], objectsToPreloadTimes[i]);
-    //    }
-
-    //    allObjectsLoaded = true;
-    //}
 }
 

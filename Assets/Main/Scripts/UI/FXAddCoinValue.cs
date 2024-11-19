@@ -10,13 +10,18 @@ public class FXAddCoinValue : MonoBehaviour
     public TMP_Text coinValue;
 
 
-    public void StartShow()
+    public void StartShow(bool isExtra)
     {
-        StartCoroutine(Show());
+        StartCoroutine(Show(isExtra));
     }
 
-    private IEnumerator Show()
+
+    //ниже корутины основная задача плавно появлять и пропадать, через CanvasGroup
+    private IEnumerator Show(bool isExtra)
     {
+        if(isExtra)
+            coinValue.color = Color.red;
+
         float alpha = 0f;
         if (canvasGroup != null)
         {

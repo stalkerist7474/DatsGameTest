@@ -31,7 +31,7 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
 
         if (eventName.IsShowIncome)
         {
-            ShowIncomeCoin(eventName.NewIncomeCoinValue);
+            ShowIncomeCoin(eventName.NewIncomeCoinValue, eventName.IsExtra);
         }
     }
 
@@ -39,11 +39,10 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
     private void UpdateTextCoinValue(int value)
     {
         valueCoin.text = value.ToString();
-        Debug.Log("UpdateTextCoinValue");
     }
 
     //отображение пополнения золота, используется пул объектов ( настраивается число, позиция, вращение и родитель для корректной работы слоев)
-    private void ShowIncomeCoin(int value)
+    private void ShowIncomeCoin(int value, bool isExtra)
     {
         GameObject newIncome = ObjectPool.GetNextObject(prefabIncomeCoin, false);
         FXAddCoinValue FX = newIncome.GetComponent<FXAddCoinValue>();
@@ -53,7 +52,7 @@ public class CoinBar : MonoBehaviour, IEventSubscriber<ChangeCoinValueEvent>
         newIncome.transform.position = GetRandomPosition();
         newIncome.transform.rotation = Quaternion.Euler(0, 0, Random.Range(1, 30f));
         newIncome.SetActive(true);
-        FX.StartShow();
+        FX.StartShow(isExtra);
     }
 
     //получение случайной координаты от изначальной точки для показа поступающих денег

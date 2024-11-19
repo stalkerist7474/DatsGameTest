@@ -25,7 +25,7 @@ public class TouchGetCoin : MonoBehaviour
 
 
 
-        if (Input.GetMouseButtonDown(0)) // Проверяем левую кнопку мыши
+        if (Input.GetMouseButtonDown(0)) // Проверяем левую кнопку мыши, если с компьютера
         {
             ProcessTouch(Input.mousePosition);
             
