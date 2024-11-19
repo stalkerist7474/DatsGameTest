@@ -15,7 +15,6 @@ public class BootEntryPoint : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-
         UIStartGame.SwitchOnCanvas();
 
 
@@ -25,10 +24,30 @@ public class BootEntryPoint : MonoBehaviour
             Debug.Log($"<color=#20C30C>Load System = {system.gameObject.name}</color>");
         }
 
+#if UNITY_EDITOR
+#else
+        InitOrientation();
+#endif
+
+
         yield return new WaitForSeconds(2f); //задержка загрузки на 2 секунды по ТЗ
 
         yield return SceneManager.LoadSceneAsync(Scenes.MENU);
 
+
+    }
+
+
+    private void InitOrientation()
+    {
+        if(SaveManager.Instance.MyData.OrientationGame == OrientationGame.Horizontal)
+        {
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
+        }
+        if (SaveManager.Instance.MyData.OrientationGame == OrientationGame.Vertical)
+        {
+            Screen.orientation = ScreenOrientation.Portrait;
+        }
 
     }
 }

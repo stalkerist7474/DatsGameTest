@@ -41,6 +41,8 @@ public class GameManager : IGameSystem,IEventSubscriber<NewGameStateEvent>
     private void Start()
     {
         Subscribe();
+
+        
     }
     public override void Activate()
     {
